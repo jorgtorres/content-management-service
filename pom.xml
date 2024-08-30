@@ -88,6 +88,11 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.unionestate.rds.persistence</groupId>
+            <artifactId>utils</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
