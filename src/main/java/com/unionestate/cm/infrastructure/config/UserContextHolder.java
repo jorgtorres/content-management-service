@@ -13,4 +13,24 @@ public class UserContextHolder {
         defaultUserToken.setOrganization("public");
         return defaultUserToken;
     });
+
+    public static void set(UserToken token) {
+        CONTEXT_THREAD.set(token);
+    }
+
+    public static void setTenant(String tenant) {
+        CONTEXT_THREAD.get().setOrganization(tenant);
+    }
+
+    public static String getTenant() {
+        return CONTEXT_THREAD.get().getOrganization();
+    }
+
+    public static String getUser() {
+        return CONTEXT_THREAD.get().getUsername();
+    }
+
+    public static UserToken getUserToken() {
+        return CONTEXT_THREAD.get();
+    }
 }
