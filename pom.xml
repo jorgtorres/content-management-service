@@ -52,6 +52,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm z</maven.build.timestamp.format>
         <highroads.rds.persistence.version>${uestversion}-SNAPSHOT</highroads.rds.persistence.version>
+        <springdoc.openapi.starter.webmvc.ui.version>2.4.0</springdoc.openapi.starter.webmvc.ui.version>
     </properties>
 
     <dependencyManagement>
@@ -81,6 +82,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${springdoc.openapi.starter.webmvc.ui.version}</version>
         </dependency>
 
         <dependency>
