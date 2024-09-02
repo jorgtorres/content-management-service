@@ -9,8 +9,8 @@ import com.unionestate.commons.sso.UserToken;
 
 public class RDSContentServiceUtils {
 
-    static Class<? extends BaseEntity> getClassFromUESTCollection(UestCollection p2ACollection, EntityMappingMetadataLookup entityMappingMetadataLookup) {
-        return entityMappingMetadataLookup.getLookup().getJsonTableMetadata(p2ACollection.getObjectType()).getClazz();
+    static Class<? extends BaseEntity> getClassFromUESTCollection(UestCollection uestCollection, EntityMappingMetadataLookup entityMappingMetadataLookup) {
+        return entityMappingMetadataLookup.getLookup().getJsonTableMetadata(uestCollection.getObjectType()).getClazz();
     }
 
     static Class<? extends BaseEntity> getClassFromDocumentCoordinates(DocumentCoordinates documentCoordinates,
