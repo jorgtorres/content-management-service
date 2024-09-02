@@ -51,7 +51,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm z</maven.build.timestamp.format>
-        <highroads.rds.persistence.version>${uestversion}-SNAPSHOT</highroads.rds.persistence.version>
+        <unionestate.rds.persistence.version>${uestversion}-SNAPSHOT</unionestate.rds.persistence.version>
         <springdoc.openapi.starter.webmvc.ui.version>2.4.0</springdoc.openapi.starter.webmvc.ui.version>
     </properties>
 
@@ -60,7 +60,7 @@
             <dependency>
                 <groupId>com.unionestate.rds.persistence</groupId>
                 <artifactId>bom</artifactId>
-                <version>${highroads.rds.persistence.version}</version>
+                <version>${unionestate.rds.persistence.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -99,6 +99,21 @@
         <dependency>
             <groupId>com.unionestate.rds.persistence</groupId>
             <artifactId>utils</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.unionestate.rds.persistence</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.unionestate.rds.persistence</groupId>
+            <artifactId>commons-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.unionestate.rds.persistence</groupId>
+            <artifactId>spring-boot-rds</artifactId>
         </dependency>
     </dependencies>
 
