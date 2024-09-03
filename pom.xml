@@ -53,6 +53,7 @@
         <maven.build.timestamp.format>yyyy-MM-dd HH:mm z</maven.build.timestamp.format>
         <unionestate.rds.persistence.version>${uestversion}-SNAPSHOT</unionestate.rds.persistence.version>
         <springdoc.openapi.starter.webmvc.ui.version>2.4.0</springdoc.openapi.starter.webmvc.ui.version>
+        <postgresql.version>42.7.4</postgresql.version>
     </properties>
 
     <dependencyManagement>
@@ -76,6 +77,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
         <dependency>
@@ -114,6 +120,19 @@
         <dependency>
             <groupId>com.unionestate.rds.persistence</groupId>
             <artifactId>spring-boot-rds</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+            <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.checkerframework</groupId>
+                    <artifactId>checker-qual</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 

@@ -1,5 +1,6 @@
 package com.unionestate.cm.web.generic.resource;
 
+import com.unionestate.cm.exception.CMException;
 import com.unionestate.commons.model.UestCollection;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +12,7 @@ import java.util.Map;
 public interface GenericQueryResource {
 
     @GetMapping(value = "/rolesMap", produces = "application/json")
-    ResponseEntity<Map<String, Object>> getRolesMap() throws Exception;
+    ResponseEntity<Map<String, Object>> getRolesMap() throws CMException;
 
     @GetMapping(value = "/{collection}/{objectId:.+}", produces = "application/json")
     ResponseEntity<Map<String, Object>> getObjectById(
@@ -22,5 +23,5 @@ public interface GenericQueryResource {
             @RequestParam(value = "properties", required = false) String[] properties,
             @RequestParam(value = "versionId", required = false) Integer versionId,
             @RequestParam(value = "v", required = false) Integer v,
-            @RequestParam(value = "expand", required = false) String[] expand);
+            @RequestParam(value = "expand", required = false) String[] expand) throws CMException;
 }

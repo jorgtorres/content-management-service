@@ -17,6 +17,7 @@ import org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoCo
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.TimeZone;
 
@@ -44,6 +45,7 @@ import java.util.TimeZone;
                 @SecurityRequirement(name = "CM Service Bearer Token")
         }
 )
+@ComponentScan({ "com.unionestate" })
 public class CmApplication {
 
     @Value("${spring.servlet.context.path}")

@@ -37,7 +37,7 @@ public class RDSContentServiceImpl implements ContentService {
     @Override
     @Transactional
     public Map<String, Object> getObjectById(ObjectRequest objectRequest) throws CMException {
-        return Map.of();
+        return getObjectByIdNoCache(objectRequest);
     }
 
     @Override
