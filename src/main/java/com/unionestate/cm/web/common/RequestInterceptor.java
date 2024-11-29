@@ -1,6 +1,7 @@
 package com.unionestate.cm.web.common;
 
 import com.unionestate.cm.infrastructure.config.UserContextHolder;
+import com.unionestate.common.rds.config.multitenant.TenantContext;
 import com.unionestate.commons.sso.UserToken;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -28,6 +29,7 @@ public class RequestInterceptor implements AsyncHandlerInterceptor {
         }
 
         UserContextHolder.set(userToken);
+        TenantContext.setCurrentTenant(userToken.getOrganization());
         return true;
     }
 

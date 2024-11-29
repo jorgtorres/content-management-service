@@ -1,0 +1,27 @@
+{
+  "_metadata": {
+    "baseNamespace": "uest",
+    "constraints": {
+      "_modelMetadataModuleList": {
+        "moduleId": "none",
+        "name": "_modelMetadataModuleList",
+        "source": "base",
+        "values": [
+          "Estate Management"
+        ]
+      }
+    },
+    "tenantNamespace": "uestpoc"
+  },
+  "property": {
+    "_id": "D:uest:property",
+    "_ns": "uest",
+    "associations": [],
+    "description": "property",
+    "displayName": "Property",
+    "name": "property",
+    "parent": "content",
+    "properties": {
+    }
+  }
+}

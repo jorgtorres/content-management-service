@@ -22,12 +22,17 @@ import java.util.Map;
 
 @Slf4j
 @Component
-@RequiredArgsConstructor
 public class GenericController implements GenericQueryResource {
 
     //private final AuthorizationManager authorizationManager; // use dependency-graph and roles-permissions.json file for REST permissions
     private final VersionResolver versionResolver;
     private final ContentService contentService;
+
+    public GenericController(VersionResolver versionResolver,
+            ContentService contentService) {
+        this.versionResolver = versionResolver;
+        this.contentService = contentService;
+    }
 
     @Override
     public ResponseEntity<Map<String, Object>> getRolesMap() throws CMException {
