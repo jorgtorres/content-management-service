@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.unionestate.rds.persistence</groupId>
+  <artifactId>commons-core</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>UEST Commons Library</name>
+  <description>UnionEstate UEST Commons Library</description>
+  <url></url>
+  <licenses>
+    <license />
+  </licenses>
+  <developers>
+    <developer />
+  </developers>
+  <scm>
+    <connection></connection>
+    <developerConnection></developerConnection>
+    <tag></tag>
+    <url></url>
+  </scm>
+  <properties>
+    <hibernate.version>6.5.2.Final</hibernate.version>
+    <java.version>21</java.version>
+    <maven.compiler.source>21</maven.compiler.source>
+    <rds-persistence-common-pom.version>0.0.1-SNAPSHOT</rds-persistence-common-pom.version>
+    <spring.version>3.3.1</spring.version>
+    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+    <spring.boot.version>3.3.1</spring.boot.version>
+    <buildNumber>SNAPSHOT</buildNumber>
+    <revision>0.0.1-SNAPSHOT</revision>
+    <lombok.version>1.18.34</lombok.version>
+    <maven.compiler.target>21</maven.compiler.target>
+    <hypersistence-utils.version>3.8.2</hypersistence-utils.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <uestversion>0.0.1</uestversion>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.unionestate.rds.persistence</groupId>
+        <artifactId>bom</artifactId>
+        <version>${revision}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>3.3.1</version>
+      <scope>compile</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>commons-logging</groupId>
+          <artifactId>commons-logging</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.34</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.unionestate.rds.persistence</groupId>
+      <artifactId>utils</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>Spring Releases Repository</id>
+      <url>https://repo.spring.io/release</url>
+    </repository>
+  </repositories>
+</project>
